@@ -1,0 +1,6 @@
+<a href [routerLink] = "['/home']"> Home </a>
+<h3>Add a new author:</h3>
+
+Name: <input type="text" name= "newAuthor.name" [(ngModel)] = "newAuthor.name">
+<input type="button" value="Add" (click) = "createAuthor()" [routerLink] = "['../home']">
+

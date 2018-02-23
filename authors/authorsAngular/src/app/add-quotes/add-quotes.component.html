@@ -1,0 +1,5 @@
+<a href [routerLink] = "['/home']"> Home </a>
+<h3>Provide a quote by: {{theAuthor.name}} </h3>
+
+Quote: <input type="text" name= "newQuote.text" [(ngModel)] = "newQuote.text">
+<input type="button" value="Add" (click) = "addQuote()" [routerLink] = "['/quotes/', theAuthor._id]">

@@ -1,0 +1,8 @@
+<a href [routerLink] = "['/home']"> Home </a>
+<h3>Edit this author:</h3>
+
+Name: <input type="text" name= "theAuthor.name" [(ngModel)] = "theAuthor.name">
+<input type="button" value="Update" (click) = "editAuthor()">
+<button [routerLink] = "['/home']">Cancel</button>
+
+
