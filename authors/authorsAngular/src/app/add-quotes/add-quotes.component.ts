@@ -38,6 +38,7 @@ export class AddQuotesComponent implements OnInit {
     let observable = this._httpService.addQuote(this.newQuote, this.theAuthor._id);
     observable.subscribe(data => {
         console.log(data);
+        this.getTheAuthor(this.theAuthor._id)
     })
 }
 
