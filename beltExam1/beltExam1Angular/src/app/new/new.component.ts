@@ -25,9 +25,9 @@ export class NewComponent implements OnInit {
       let pet = data as any;
       console.log(pet);
       if (pet.message === "Error") {
-        console.log("pet.eror var")
-        this.validationError = pet.error.message;
-        console.log(this.validationError)
+        console.log("pet.error var")
+        this.validationError = pet.error.errors;
+        console.log("VALIDATIONERROR", this.validationError)
       }
       else {
        this.router.navigate(['/home']);

@@ -85,7 +85,7 @@ app.put("/pets/:id", function(req, res) {
 
     console.log("Likes in the Server!", req.body.likes)
 
-    Pet.update({_id: req.params.id}, pet, function (err, results) {
+    Pet.update({_id: req.params.id}, pet, { runValidators: true}, function (err, results) { // don't forget to add { runValidators: true}
         if(err){
             console.log("Returned error", err);
             res.json({message: "Update error", error: err})
